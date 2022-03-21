@@ -1,0 +1,7 @@
+name: ACCMenuAPI
+author: ACrispyCookie
+version: 1.0-SNAPSHOT
+main: me.acrispycookie.accmenuapi.Main
+commands:
+  menu:
+    description: Command for testing.
