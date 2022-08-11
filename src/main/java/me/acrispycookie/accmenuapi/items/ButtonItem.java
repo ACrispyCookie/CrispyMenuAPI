@@ -10,6 +10,10 @@ public abstract class ButtonItem extends Item {
         super(row, column, display);
     }
 
+    public ButtonItem(int slot, ItemStack display) {
+        super(slot, display);
+    }
+
     public void click(){
         run();
     }

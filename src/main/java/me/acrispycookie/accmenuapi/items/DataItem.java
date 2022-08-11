@@ -1,24 +1,36 @@
 package me.acrispycookie.accmenuapi.items;
 
-import me.acrispycookie.accmenuapi.Main;
 import me.acrispycookie.accmenuapi.utilities.itemstack.ItemStackBuilder;
-import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
 import org.bukkit.inventory.ItemStack;
 
-public abstract class DataItem extends ButtonItem {
+public class DataItem extends ButtonItem {
 
-    public abstract ItemStack getLoaded();
     boolean isLoaded = false;
+    Runnable runnable;
 
     public DataItem(int row, int column, ItemStack loading) {
         super(row, column, loading);
     }
 
+    public DataItem(int slot, ItemStack display) {
+        super(slot, display);
+    }
+
     public DataItem(int row, int column) {
         super(row, column, null);
         display = getDefaultLoading();
+    }
+
+    public DataItem(int slot) {
+        super(slot, null);
+        display = getDefaultLoading();
+    }
+
+    @Override
+    protected void run() {
+        runnable.run();
     }
 
     public void click(){
@@ -27,12 +39,11 @@ public abstract class DataItem extends ButtonItem {
         }
     }
 
-    public void load(){
-        Bukkit.getScheduler().runTaskAsynchronously(Main.getInstance(), () -> {
-            display = getLoaded();
-            isLoaded = true;
-            DataItem.this.update();
-        });
+    public void load(ItemStack loaded, Runnable run){
+        display = loaded;
+        runnable = run;
+        isLoaded = true;
+        DataItem.this.update();
     }
 
     private ItemStack getDefaultLoading(){

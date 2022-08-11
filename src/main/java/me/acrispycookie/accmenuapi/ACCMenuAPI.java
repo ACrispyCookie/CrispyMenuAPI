@@ -5,9 +5,9 @@ import me.acrispycookie.accmenuapi.managers.MenuManager;
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
 
-public class Main extends JavaPlugin {
+public class ACCMenuAPI extends JavaPlugin {
 
-    static Main instance;
+    static ACCMenuAPI instance;
     MenuManager menuManager;
     @Override
     public void onEnable() {
@@ -15,7 +15,6 @@ public class Main extends JavaPlugin {
         instance = this;
         menuManager = new MenuManager();
         Bukkit.getPluginManager().registerEvents(new MenuClickListener(), this);
-        getCommand("menu").setExecutor(new MenuCommand());
     }
 
     @Override
@@ -27,7 +26,7 @@ public class Main extends JavaPlugin {
         return menuManager;
     }
 
-    public static Main getInstance(){
+    public static ACCMenuAPI getInstance(){
         return instance;
     }
 }

@@ -5,6 +5,7 @@ import me.acrispycookie.accmenuapi.items.Item;
 import net.md_5.bungee.api.ChatColor;
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
+import org.bukkit.event.inventory.InventoryType;
 import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.InventoryHolder;
 
@@ -16,7 +17,7 @@ public class SimpleMenu extends Menu {
     InventoryHolder holder;
     ArrayList<Item> items;
     public SimpleMenu(Player p, String title, int rows) throws InitializeException {
-        super(p, rows);
+        super(p, rows, InventoryType.CHEST);
         holder = () -> menu;
         menu =  Bukkit.createInventory(holder, rows * 9, ChatColor.translateAlternateColorCodes('&', title));
         this.items = new ArrayList<>();

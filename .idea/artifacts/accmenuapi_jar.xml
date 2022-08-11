@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="accmenuapi:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/accmenuapi_jar</output-path>
+    <root id="archive" name="accmenuapi.jar">
+      <element id="module-output" name="accmenuapi" />
+    </root>
+  </artifact>
+</component>

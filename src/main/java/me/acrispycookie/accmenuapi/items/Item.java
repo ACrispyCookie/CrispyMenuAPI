@@ -14,12 +14,22 @@ public abstract class Item {
         this.display = display;
     }
 
+    public Item(int slot, ItemStack display){
+        this.slot = slot;
+        this.display = display;
+    }
+
     public void setMenu(Menu menu){
         this.menu = menu;
     }
 
     public void update(){
         menu.update(this);
+    }
+
+    public void setDisplay(ItemStack display){
+        this.display = display;
+        update();
     }
 
     public ItemStack getDisplay() {
