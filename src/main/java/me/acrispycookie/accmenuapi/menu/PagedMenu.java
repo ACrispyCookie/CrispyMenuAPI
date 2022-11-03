@@ -41,18 +41,16 @@ public class PagedMenu extends Menu {
         invs.get(currentPage).open();
     }
     public void addItem(Item item, int page) throws InitializeException {
-        int current = currentPage;
-        currentPage = page;
-        if(getInv().getItem(item.getSlot()) != null){
+        SimpleMenu menu = invs.get(page);
+        if(menu.getInv().getItem(item.getSlot()) != null){
             throw new InitializeException("There is already an item in this slot.");
         }
-        else if(item.getSlot() >= getInv().getSize()){
+        else if(item.getSlot() >= menu.getInv().getSize()){
             throw new InitializeException("The menu is too small to place the item in this slot.");
         }
-        getItems().add(item);
-        item.setMenu(this);
-        getInv().setItem(item.getSlot(), item.getDisplay());
-        currentPage = current;
+        menu.getItems().add(item);
+        item.setMenu(menu);
+        menu.getInv().setItem(item.getSlot(), item.getDisplay());
     }
 
     public void addGlobalItem(Item item) throws InitializeException {
