@@ -1,13 +1,13 @@
-package me.acrispycookie.accmenuapi;
+package me.acrispycookie.crispyinvlib;
 
-import me.acrispycookie.accmenuapi.listeners.MenuClickListener;
-import me.acrispycookie.accmenuapi.managers.MenuManager;
+import me.acrispycookie.crispyinvlib.listeners.MenuClickListener;
+import me.acrispycookie.crispyinvlib.managers.MenuManager;
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
 
-public class ACCMenuAPI extends JavaPlugin {
+public class CrispyInvLib extends JavaPlugin {
 
-    static ACCMenuAPI instance;
+    static CrispyInvLib instance;
     MenuManager menuManager;
     @Override
     public void onEnable() {
@@ -26,7 +26,7 @@ public class ACCMenuAPI extends JavaPlugin {
         return menuManager;
     }
 
-    public static ACCMenuAPI getInstance(){
+    public static CrispyInvLib getInstance(){
         return instance;
     }
 }

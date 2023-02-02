@@ -5,10 +5,10 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>me.acrispycookie</groupId>
-  <artifactId>accmenuapi</artifactId>
+  <artifactId>crispyinvlib</artifactId>
   <version>1.0-SNAPSHOT</version>
 
-  <name>ACCMenuAPI</name>
+  <name>CrispyInvLib</name>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

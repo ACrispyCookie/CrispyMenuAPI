@@ -1,9 +1,9 @@
-package me.acrispycookie.accmenuapi.menu;
+package me.acrispycookie.crispyinvlib.menu;
 
-import me.acrispycookie.accmenuapi.ACCMenuAPI;
-import me.acrispycookie.accmenuapi.exceptions.InitializeException;
-import me.acrispycookie.accmenuapi.items.Item;
-import me.acrispycookie.accmenuapi.items.ButtonItem;
+import me.acrispycookie.crispyinvlib.CrispyInvLib;
+import me.acrispycookie.crispyinvlib.exceptions.InitializeException;
+import me.acrispycookie.crispyinvlib.items.Item;
+import me.acrispycookie.crispyinvlib.items.ButtonItem;
 import org.bukkit.entity.Player;
 import org.bukkit.event.inventory.InventoryClickEvent;
 import org.bukkit.event.inventory.InventoryType;
@@ -26,13 +26,13 @@ public abstract class Menu {
         player = p;
     }
     public void open(){
-        ACCMenuAPI.getInstance().getMenuManager().addMenu(this);
+        CrispyInvLib.getInstance().getMenuManager().addMenu(this);
         player.closeInventory();
         loadInventoryItems();
         player.openInventory(getInv());
     }
     public void close(){
-        ACCMenuAPI.getInstance().getMenuManager().removeMenu(this);
+        CrispyInvLib.getInstance().getMenuManager().removeMenu(this);
         player.closeInventory();
     }
 

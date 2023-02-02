@@ -1,6 +1,6 @@
-package me.acrispycookie.accmenuapi.managers;
+package me.acrispycookie.crispyinvlib.managers;
 
-import me.acrispycookie.accmenuapi.menu.Menu;
+import me.acrispycookie.crispyinvlib.menu.Menu;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.Inventory;
 

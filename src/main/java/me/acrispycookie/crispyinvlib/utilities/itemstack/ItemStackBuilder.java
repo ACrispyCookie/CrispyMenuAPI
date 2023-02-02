@@ -1,4 +1,4 @@
-package me.acrispycookie.accmenuapi.utilities.itemstack;
+package me.acrispycookie.crispyinvlib.utilities.itemstack;
 
 import net.minecraft.server.v1_8_R3.NBTTagCompound;
 import net.minecraft.server.v1_8_R3.NBTTagList;

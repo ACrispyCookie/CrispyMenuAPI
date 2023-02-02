@@ -1,6 +1,6 @@
-package me.acrispycookie.accmenuapi.items;
+package me.acrispycookie.crispyinvlib.items;
 
-import me.acrispycookie.accmenuapi.menu.Menu;
+import me.acrispycookie.crispyinvlib.menu.Menu;
 import org.bukkit.inventory.ItemStack;
 
 public abstract class Item {

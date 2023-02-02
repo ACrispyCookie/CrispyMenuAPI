@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="CrispyInvLib">
+    <output-path>$PROJECT_DIR$/out/artifacts/CrispyInvLib</output-path>
+    <root id="archive" name="CrispyInvLib.jar">
+      <element id="module-output" name="CrispyInvLib" />
+    </root>
+  </artifact>
+</component>

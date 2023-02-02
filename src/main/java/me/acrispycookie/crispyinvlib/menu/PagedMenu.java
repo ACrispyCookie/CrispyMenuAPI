@@ -1,10 +1,10 @@
-package me.acrispycookie.accmenuapi.menu;
+package me.acrispycookie.crispyinvlib.menu;
 
-import me.acrispycookie.accmenuapi.exceptions.InitializeException;
-import me.acrispycookie.accmenuapi.items.ButtonItem;
-import me.acrispycookie.accmenuapi.items.Item;
-import me.acrispycookie.accmenuapi.items.SimpleItem;
-import me.acrispycookie.accmenuapi.utilities.itemstack.ItemStackBuilder;
+import me.acrispycookie.crispyinvlib.exceptions.InitializeException;
+import me.acrispycookie.crispyinvlib.items.ButtonItem;
+import me.acrispycookie.crispyinvlib.items.Item;
+import me.acrispycookie.crispyinvlib.items.SimpleItem;
+import me.acrispycookie.crispyinvlib.utilities.itemstack.ItemStackBuilder;
 import org.bukkit.Material;
 import org.bukkit.entity.Player;
 import org.bukkit.event.inventory.InventoryType;
