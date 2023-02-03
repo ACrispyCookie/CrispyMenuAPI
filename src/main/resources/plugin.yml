@@ -1,5 +1,5 @@
 name: CrispyInvLib
 author: ACrispyCookie
 version: 1.0-SNAPSHOT
-main: me.acrispycookie.accmenuapi.ACCMenuAPI
+main: me.acrispycookie.crispyinvlib.CrispyInvLib
 commands:

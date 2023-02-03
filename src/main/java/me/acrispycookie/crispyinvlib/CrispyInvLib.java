@@ -11,7 +11,7 @@ public class CrispyInvLib extends JavaPlugin {
     MenuManager menuManager;
     @Override
     public void onEnable() {
-        getLogger().info("Loading ACCMenuAPI...");
+        getLogger().info("Loading CrispyInvLib...");
         instance = this;
         menuManager = new MenuManager();
         Bukkit.getPluginManager().registerEvents(new MenuClickListener(), this);
@@ -19,7 +19,7 @@ public class CrispyInvLib extends JavaPlugin {
 
     @Override
     public void onDisable(){
-        getLogger().info("Disabling ACCMenuAPI...");
+        getLogger().info("Disabling CrispyInvLib...");
     }
 
     public MenuManager getMenuManager() {
