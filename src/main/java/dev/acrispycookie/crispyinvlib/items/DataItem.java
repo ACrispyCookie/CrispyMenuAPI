@@ -1,6 +1,6 @@
-package me.acrispycookie.crispyinvlib.items;
+package dev.acrispycookie.crispyinvlib.items;
 
-import me.acrispycookie.crispyinvlib.utilities.itemstack.ItemStackBuilder;
+import dev.acrispycookie.crispyinvlib.utilities.itemstack.ItemStackBuilder;
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
 import org.bukkit.inventory.ItemStack;

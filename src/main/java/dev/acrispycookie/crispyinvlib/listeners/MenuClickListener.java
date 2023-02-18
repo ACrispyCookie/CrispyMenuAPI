@@ -1,8 +1,8 @@
-package me.acrispycookie.crispyinvlib.listeners;
+package dev.acrispycookie.crispyinvlib.listeners;
 
-import me.acrispycookie.crispyinvlib.CrispyInvLib;
-import me.acrispycookie.crispyinvlib.menu.Menu;
-import me.acrispycookie.crispyinvlib.managers.MenuManager;
+import dev.acrispycookie.crispyinvlib.CrispyInvLib;
+import dev.acrispycookie.crispyinvlib.managers.MenuManager;
+import dev.acrispycookie.crispyinvlib.menu.Menu;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.inventory.InventoryClickEvent;

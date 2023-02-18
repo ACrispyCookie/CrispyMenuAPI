@@ -1,4 +1,4 @@
-package me.acrispycookie.crispyinvlib.items;
+package dev.acrispycookie.crispyinvlib.items;
 
 import org.bukkit.inventory.ItemStack;
 

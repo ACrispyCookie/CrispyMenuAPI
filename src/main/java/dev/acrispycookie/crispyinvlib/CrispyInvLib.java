@@ -1,7 +1,7 @@
-package me.acrispycookie.crispyinvlib;
+package dev.acrispycookie.crispyinvlib;
 
-import me.acrispycookie.crispyinvlib.listeners.MenuClickListener;
-import me.acrispycookie.crispyinvlib.managers.MenuManager;
+import dev.acrispycookie.crispyinvlib.listeners.MenuClickListener;
+import dev.acrispycookie.crispyinvlib.managers.MenuManager;
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
 

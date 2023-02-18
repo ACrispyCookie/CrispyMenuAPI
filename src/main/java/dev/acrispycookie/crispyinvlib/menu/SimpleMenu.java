@@ -1,7 +1,7 @@
-package me.acrispycookie.crispyinvlib.menu;
+package dev.acrispycookie.crispyinvlib.menu;
 
-import me.acrispycookie.crispyinvlib.exceptions.InitializeException;
-import me.acrispycookie.crispyinvlib.items.Item;
+import dev.acrispycookie.crispyinvlib.exceptions.InitializeException;
+import dev.acrispycookie.crispyinvlib.items.Item;
 import net.md_5.bungee.api.ChatColor;
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;

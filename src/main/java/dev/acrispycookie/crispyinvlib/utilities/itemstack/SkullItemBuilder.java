@@ -1,4 +1,4 @@
-package me.acrispycookie.crispyinvlib.utilities.itemstack;
+package dev.acrispycookie.crispyinvlib.utilities.itemstack;
 
 import com.google.gson.Gson;
 import com.google.gson.JsonObject;
