@@ -6,8 +6,9 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="CrispyInvLib" />
+        <module name="CrispyMenuAPI" />
         <module name="crispyinvlib" />
+        <module name="ACCMenuAPI" />
       </profile>
     </annotationProcessing>
   </component>

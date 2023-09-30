@@ -1,4 +1,4 @@
-package dev.acrispycookie.crispyinvlib.utilities.itemstack;
+package dev.acrispycookie.crispymenuapi.utilities.itemstack;
 
 import net.minecraft.server.v1_8_R3.*;
 import org.bukkit.craftbukkit.v1_8_R3.inventory.CraftItemStack;

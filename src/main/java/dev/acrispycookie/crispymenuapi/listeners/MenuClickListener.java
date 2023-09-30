@@ -1,8 +1,8 @@
-package dev.acrispycookie.crispyinvlib.listeners;
+package dev.acrispycookie.crispymenuapi.listeners;
 
-import dev.acrispycookie.crispyinvlib.CrispyInvLib;
-import dev.acrispycookie.crispyinvlib.managers.MenuManager;
-import dev.acrispycookie.crispyinvlib.menu.Menu;
+import dev.acrispycookie.crispymenuapi.CrispyMenuAPI;
+import dev.acrispycookie.crispymenuapi.managers.MenuManager;
+import dev.acrispycookie.crispymenuapi.menu.Menu;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.inventory.InventoryClickEvent;
@@ -12,16 +12,20 @@ public class MenuClickListener implements Listener {
 
     @EventHandler
     public void onClick(InventoryClickEvent e){
-        MenuManager manager = CrispyInvLib.getInstance().getMenuManager();
+        MenuManager manager = CrispyMenuAPI.getInstance().getMenuManager();
         Menu menu = manager.getMenuByID(manager.getMenuByInventory(e.getClickedInventory()));
         if(e.getClickedInventory() != null && e.getInventory() != null && menu != null){
-            menu.click(e.getSlot(), e);
+            if(e.getClick().isLeftClick()) {
+                menu.leftClick(e.getSlot(), e);
+            } else if(e.getClick().isRightClick()) {
+                menu.rightClick(e.getSlot(), e);
+            }
         }
     }
 
     @EventHandler
     public void onClose(InventoryCloseEvent e){
-        MenuManager manager = CrispyInvLib.getInstance().getMenuManager();
+        MenuManager manager = CrispyMenuAPI.getInstance().getMenuManager();
         Menu menu = manager.getMenuByID(manager.getMenuByInventory(e.getInventory()));
         if(menu != null){
             manager.removeMenu(menu);

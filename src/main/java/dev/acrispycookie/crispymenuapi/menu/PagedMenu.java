@@ -1,10 +1,10 @@
-package dev.acrispycookie.crispyinvlib.menu;
+package dev.acrispycookie.crispymenuapi.menu;
 
-import dev.acrispycookie.crispyinvlib.exceptions.InitializeException;
-import dev.acrispycookie.crispyinvlib.items.ButtonItem;
-import dev.acrispycookie.crispyinvlib.items.Item;
-import dev.acrispycookie.crispyinvlib.items.SimpleItem;
-import dev.acrispycookie.crispyinvlib.utilities.itemstack.ItemStackBuilder;
+import dev.acrispycookie.crispymenuapi.exceptions.InitializeException;
+import dev.acrispycookie.crispymenuapi.items.ButtonItem;
+import dev.acrispycookie.crispymenuapi.items.Item;
+import dev.acrispycookie.crispymenuapi.items.SimpleItem;
+import dev.acrispycookie.crispymenuapi.utilities.itemstack.ItemStackBuilder;
 import org.bukkit.Material;
 import org.bukkit.entity.Player;
 import org.bukkit.event.inventory.InventoryType;
@@ -93,7 +93,7 @@ public class PagedMenu extends Menu {
         previousAlt = new SimpleItem(row, column, alt);
         previousDisplay = new ButtonItem(row, column, prev) {
             @Override
-            protected void run() {
+            protected void onLeftClick() {
                 changePage(-1);
             }
         };
@@ -103,7 +103,7 @@ public class PagedMenu extends Menu {
         nextAlt = new SimpleItem(row, column, alt);
         nextDisplay = new ButtonItem(row, column, next) {
             @Override
-            protected void run() {
+            protected void onLeftClick() {
                 changePage(1);
             }
         };;
@@ -112,7 +112,7 @@ public class PagedMenu extends Menu {
     private Item getDefaultPrevious(){
         return new ButtonItem(rows - 1, 3, new ItemStackBuilder(Material.ARROW).name("&dPrevious Page").build()) {
             @Override
-            protected void run() {
+            protected void onLeftClick() {
                 changePage(-1);
             }
         };
@@ -121,7 +121,7 @@ public class PagedMenu extends Menu {
     private Item getDefaultNext(){
         return new ButtonItem(rows - 1, 5, new ItemStackBuilder(Material.ARROW).name("&dNext Page").build()) {
             @Override
-            protected void run() {
+            protected void onLeftClick() {
                 changePage(1);
             }
         };
@@ -130,7 +130,7 @@ public class PagedMenu extends Menu {
     private Item getPageAlt(int column){
         return new ButtonItem(rows - 1, column, new ItemStackBuilder(Material.AIR).build()) {
             @Override
-            protected void run() {
+            protected void onLeftClick() {
                 changePage(1);
             }
         };

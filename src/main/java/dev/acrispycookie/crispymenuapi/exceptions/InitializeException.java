@@ -1,4 +1,4 @@
-package dev.acrispycookie.crispyinvlib.exceptions;
+package dev.acrispycookie.crispymenuapi.exceptions;
 
 public class InitializeException extends Exception {
 

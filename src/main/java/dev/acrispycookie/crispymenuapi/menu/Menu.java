@@ -1,9 +1,9 @@
-package dev.acrispycookie.crispyinvlib.menu;
+package dev.acrispycookie.crispymenuapi.menu;
 
-import dev.acrispycookie.crispyinvlib.CrispyInvLib;
-import dev.acrispycookie.crispyinvlib.exceptions.InitializeException;
-import dev.acrispycookie.crispyinvlib.items.Item;
-import dev.acrispycookie.crispyinvlib.items.ButtonItem;
+import dev.acrispycookie.crispymenuapi.CrispyMenuAPI;
+import dev.acrispycookie.crispymenuapi.exceptions.InitializeException;
+import dev.acrispycookie.crispymenuapi.items.Item;
+import dev.acrispycookie.crispymenuapi.items.ButtonItem;
 import org.bukkit.entity.Player;
 import org.bukkit.event.inventory.InventoryClickEvent;
 import org.bukkit.event.inventory.InventoryType;
@@ -26,13 +26,13 @@ public abstract class Menu {
         player = p;
     }
     public void open(){
-        CrispyInvLib.getInstance().getMenuManager().addMenu(this);
+        CrispyMenuAPI.getInstance().getMenuManager().addMenu(this);
         player.closeInventory();
         loadInventoryItems();
         player.openInventory(getInv());
     }
     public void close(){
-        CrispyInvLib.getInstance().getMenuManager().removeMenu(this);
+        CrispyMenuAPI.getInstance().getMenuManager().removeMenu(this);
         player.closeInventory();
     }
 
@@ -40,12 +40,21 @@ public abstract class Menu {
         getInv().setItem(item.getSlot(), item.getDisplay());
     }
 
-    public void click(int slot, InventoryClickEvent e){
+    public void leftClick(int slot, InventoryClickEvent e){
         Item item = getItemBySlot(slot);
         e.setCancelled(true);
         if(item instanceof ButtonItem){
             ButtonItem button = (ButtonItem) item;
-            button.click();
+            button.leftClick();
+        }
+    }
+
+    public void rightClick(int slot, InventoryClickEvent e){
+        Item item = getItemBySlot(slot);
+        e.setCancelled(true);
+        if(item instanceof ButtonItem){
+            ButtonItem button = (ButtonItem) item;
+            button.rightClick();
         }
     }
 

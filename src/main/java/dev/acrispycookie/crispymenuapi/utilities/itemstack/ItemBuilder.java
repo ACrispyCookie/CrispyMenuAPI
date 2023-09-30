@@ -1,4 +1,4 @@
-package dev.acrispycookie.crispyinvlib.utilities.itemstack;
+package dev.acrispycookie.crispymenuapi.utilities.itemstack;
 
 import net.minecraft.server.v1_8_R3.NBTBase;
 import org.bukkit.ChatColor;

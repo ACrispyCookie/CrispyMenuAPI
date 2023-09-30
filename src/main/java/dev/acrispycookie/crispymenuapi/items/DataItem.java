@@ -1,6 +1,6 @@
-package dev.acrispycookie.crispyinvlib.items;
+package dev.acrispycookie.crispymenuapi.items;
 
-import dev.acrispycookie.crispyinvlib.utilities.itemstack.ItemStackBuilder;
+import dev.acrispycookie.crispymenuapi.utilities.itemstack.ItemStackBuilder;
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
 import org.bukkit.inventory.ItemStack;
@@ -8,7 +8,8 @@ import org.bukkit.inventory.ItemStack;
 public class DataItem extends ButtonItem {
 
     boolean isLoaded = false;
-    Runnable runnable;
+    Runnable leftClick;
+    Runnable rightClick;
 
     public DataItem(int row, int column, ItemStack loading) {
         super(row, column, loading);
@@ -29,19 +30,27 @@ public class DataItem extends ButtonItem {
     }
 
     @Override
-    protected void run() {
-        runnable.run();
+    protected void onLeftClick() {
+        leftClick.run();
     }
 
-    public void click(){
-        if(isLoaded){
-            run();
-        }
+    @Override
+    protected void onRightClick() {
+        rightClick.run();
     }
 
-    public void load(ItemStack loaded, Runnable run){
+    public void load(ItemStack loaded, Runnable leftClick){
         display = loaded;
-        runnable = run;
+        this.leftClick = leftClick;
+        this.rightClick = leftClick;
+        isLoaded = true;
+        DataItem.this.update();
+    }
+
+    public void load(ItemStack loaded, Runnable leftClick, Runnable rightClick){
+        display = loaded;
+        this.leftClick = leftClick;
+        this.rightClick = rightClick;
         isLoaded = true;
         DataItem.this.update();
     }

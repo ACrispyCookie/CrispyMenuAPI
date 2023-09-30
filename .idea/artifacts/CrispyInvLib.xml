@@ -2,7 +2,7 @@
   <artifact type="jar" name="CrispyInvLib">
     <output-path>$PROJECT_DIR$/out/artifacts/CrispyInvLib</output-path>
     <root id="archive" name="CrispyInvLib.jar">
-      <element id="module-output" name="CrispyInvLib" />
+      <element id="module-output" name="CrispyMenuAPI" />
     </root>
   </artifact>
 </component>
